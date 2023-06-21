@@ -1,0 +1,174 @@
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+body a {
+  text-decoration: none !important;
+}
+body .text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  body .text {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+  }
+}
+body .container {
+  max-width: 576px !important;
+  min-height: 100vh;
+}
+body .container .profile-image {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9999px;
+  margin-bottom: 8px;
+  transition: all 0.75s ease-in-out;
+}
+body .container .btn-link {
+  padding: 16px 24px;
+  gap: 8px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 0.5s ease-in-out;
+}
+body .container .cl-toggle-switch {
+  position: relative;
+}
+body .container .cl-toggle-switch .cl-switch {
+  position: relative;
+  display: inline-block;
+  /* Input */
+  /* Checked */
+}
+body .container .cl-toggle-switch .cl-switch input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.38);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+body .container .cl-toggle-switch .cl-switch span {
+  /* Track */
+  /* Thumb */
+}
+body .container .cl-toggle-switch .cl-switch span::before {
+  content: "";
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 8px;
+  width: 36px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+  cursor: pointer;
+}
+body .container .cl-toggle-switch .cl-switch span::after {
+  content: url("icons/dark.svg");
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+body .container .cl-toggle-switch .cl-switch input:checked {
+  right: -10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body .container .cl-toggle-switch .cl-switch input:checked + span::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body .container .cl-toggle-switch .cl-switch input:checked + span::after {
+  content: url("icons/light.svg");
+  background-color: #000;
+  transform: translateX(16px);
+}
+body[data-theme=dark] {
+  background-image: url("images/bg-desktop.jpg");
+}
+body[data-theme=dark] .profile-image {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+body[data-theme=dark] .btn-link {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+body[data-theme=dark] .btn-link:hover, body[data-theme=dark] .btn-link:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid #ffffff;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+body[data-theme=dark] *,
+body[data-theme=dark] *:hover {
+  color: #ffffff;
+}
+@media (max-width: 576px) {
+  body[data-theme=dark] {
+    background-image: url("images/bg-mobile.jpg") !important;
+  }
+}
+body[data-theme=light] {
+  background-image: url("images/bg-desktop-light.jpg");
+}
+body[data-theme=light] .profile-image {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+body[data-theme=light] .btn-link {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+body[data-theme=light] .btn-link:hover, body[data-theme=light] .btn-link:focus {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1.5px solid #000000;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+body[data-theme=light] *,
+body[data-theme=light] *:hover {
+  color: #000000 !important;
+}
+@media (max-width: 576px) {
+  body[data-theme=light] {
+    background-image: url("images/bg-mobile-light.jpg") !important;
+  }
+}/*# sourceMappingURL=style.css.map */
